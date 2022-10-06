@@ -55,7 +55,7 @@ const Index = () => {
 						aria-label="Increment value"
 						onClick={() => {
 							dispatch(reset());
-							toastNotify(toast, 'error', 'Successfully Increment By Amount');
+							toastNotify(toast, 'error', 'Successfully Reset');
 						}}
 					>
 						Reset
