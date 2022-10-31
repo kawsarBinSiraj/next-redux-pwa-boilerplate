@@ -3,7 +3,6 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
 import { Provider } from 'react-redux';
 import Head from 'next/head';
-import { SessionProvider } from 'next-auth/react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -37,9 +36,7 @@ const MyApp = ({ Component, pageProps: { session, ...pageProps } }) => {
 				<PersistGate persistor={persistor} loading={null}>
 					{() => (
 						<Cornerstone>
-							<SessionProvider session={session}>
-								<Component {...pageProps} />
-							</SessionProvider>
+							<Component {...pageProps} />
 							<ToastContainer />
 						</Cornerstone>
 					)}
