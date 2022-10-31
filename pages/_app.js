@@ -20,7 +20,7 @@ const Cornerstone = ({ children }) => {
 	);
 };
 
-const MyApp = ({ Component, pageProps: { session, ...pageProps } }) => {
+const MyApp = ({ Component, pageProps: { ...pageProps } }) => {
 	// re-creating store using pageProps
 	const store = useStore(pageProps.initialReduxState);
 
